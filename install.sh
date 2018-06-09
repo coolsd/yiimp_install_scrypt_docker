@@ -81,12 +81,16 @@ default         0;
     output "Installing Mariadb Server."
     output " "
     sleep 3
+	
     
     
     # create random password
     rootpasswd=$(openssl rand -base64 12)
     export DEBIAN_FRONTEND="noninteractive"
     sudo aptitude -y install mariadb-server
+	sleep 3
+	/etc/init.d/mysql start
+	sleep 3
     
     output " "
     output "Installing php7.x and other needed files"
