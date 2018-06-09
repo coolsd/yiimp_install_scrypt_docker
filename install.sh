@@ -47,6 +47,7 @@ displayErr() {
     sudo apt-get -y update 
     sudo apt-get -y upgrade
     sudo apt-get -y autoremove
+	sudo apt-get -y install dialog apt-utils
     
     output " "
     output "Switching to Aptitude"
